@@ -3,16 +3,16 @@ package com.atm.new1;
 import java.util.Scanner;
 
 public class CreateNewAccount {
-	String userSelectBankName;
+	
 	Scanner userinput = new Scanner(System.in);
-	public void createAccount1()  {
+	public String createAccount1()  {
 		System.out.println("..........Bank Of Total Branch..........");
 		System.out.println("1. Indian Bank");
 		System.out.println("2. State Bank");
 		System.out.println("3. Indian Overseas Bank");
 		System.out.println("Which bank you want ? : ");
 		
-		
+		String userSelectBankName =null ;	
 	int	bank= userinput.nextInt();
 	
 	switch (bank) {
@@ -31,6 +31,7 @@ public class CreateNewAccount {
 		
  }
 	
+	return  userSelectBankName;
 		
 	}
 }
