@@ -25,14 +25,14 @@ public class FormFillingDAO {
 		pst.setString(7, form.getAccountNumber());
 		pst.setString(8, form.getPass());
 		pst.setDouble(9, form.getAmount());
-		pst.setString(10,form.getBank());
+		pst.setString(10, form.getBank());
 		pst.setString(11, dateTime1);
 		pst.setString(12, dateTime1);
 
 		pst.executeUpdate();
-
 		pst.close();
 		con.close();
+
 		System.out.println("Account Created sucess!");
 	}
 }

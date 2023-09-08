@@ -6,27 +6,20 @@ import java.util.Scanner;
 public class AlreadyHaveAccount {
 	String accountNumber1;
 	String pass1;
-	
+
 	boolean exitFlag = false;
 
 	public void alreadyHaveAccount() throws SQLException {
-		
+
 		Scanner Scanner = new Scanner(System.in);
-		
+
 		System.out.println("Enter your AccountNumber : ");
 		accountNumber1 = Scanner.next();
 		System.out.println("Enter Your Password : ");
 		pass1 = Scanner.next();
-		AlreadyHaveAccountDAO ob = new AlreadyHaveAccountDAO();
-	//	try {
-		ob.userIdentify(accountNumber1);
-		//}catch(Exception e) {
-			///System.out.println("Already Have Account : " + e.getMessage());
-		//}
-		
+		AlreadyHaveAccountDAO myAccount = new AlreadyHaveAccountDAO();
 
-		
-		//System.out.println("Hello " + name + " Welcome to " + bank);
+		myAccount.userIdentify(accountNumber1);
 
 		while (!exitFlag) {
 			System.out.println("ATM Options:");
@@ -36,27 +29,27 @@ public class AlreadyHaveAccount {
 			System.out.println("4. Main");
 			System.out.print("Enter choice: ");
 			int choice = Scanner.nextInt();
-			
+
 			switch (choice) {
 			case 1:
 
-				ob.checkBalance(accountNumber1);
+				myAccount.checkBalance(accountNumber1);
 
 				break;
 			case 2:
 
-				ob.deposit();
+				myAccount.deposit();
 
 				break;
 			case 3:
 
-				ob.withdraw(accountNumber1);
+				myAccount.withdraw(accountNumber1);
 
 				break;
 
 			case 4:
-				SelectAcType  ob1 = new SelectAcType ();
-				ob1.displayUser();
+				SelectAcType acType = new SelectAcType();
+				acType.displayUser();
 
 				break;
 			default:
@@ -64,7 +57,6 @@ public class AlreadyHaveAccount {
 			}
 		}
 		Scanner.close();
-		
-		
+
 	}
 }

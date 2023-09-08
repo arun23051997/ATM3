@@ -6,19 +6,19 @@ public class FormFillGetSet {
 	private int age;
 	private String gender;
 	private String bank;
-	private	String mobileNumber;
-	private	String adhar;
-	private	String email;
-	private	String accountNumber;
-	private	String pass;
-	private	double amount;
-	
-	
-	FormFillGetSet(){}
-	
+	private String mobileNumber;
+	private String adhar;
+	private String email;
+	private String accountNumber;
+	private String pass;
+	private double amount;
+
+	FormFillGetSet() {
+	}
+
 	public FormFillGetSet(String name, int age, String gender, String mobileNumber, String adhar, String email,
-			String accountNumber, String pass,String bank, double amount) {
-		
+			String accountNumber, String pass, String bank, double amount) {
+
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
@@ -28,9 +28,8 @@ public class FormFillGetSet {
 		this.accountNumber = accountNumber;
 		this.pass = pass;
 		this.amount = amount;
-		this.bank=bank;
+		this.bank = bank;
 	}
-
 
 	public String getName() {
 		return name;
@@ -95,13 +94,15 @@ public class FormFillGetSet {
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
+
 	public String getBank() {
 		return bank;
 	}
 
 	public void setBank(String bank) {
-		this.bank =bank ;
+		this.bank = bank;
 	}
+
 	public double getAmount() {
 		return amount;
 	}
@@ -110,5 +111,4 @@ public class FormFillGetSet {
 		this.amount = amount;
 	}
 
-	
 }

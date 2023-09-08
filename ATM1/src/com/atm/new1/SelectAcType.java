@@ -7,7 +7,7 @@ public class SelectAcType {
 	
 		boolean exitFlag = false;
 		String bank2 ;
-		Scanner userinput = new Scanner(System.in);
+		Scanner userInput = new Scanner(System.in);
 
 		public void displayUser() throws SQLException {
 			
@@ -15,57 +15,22 @@ public class SelectAcType {
 				System.out.println("1.Create Account");
 				System.out.println("2.Already have Account");
 				System.out.println("3. Exit");
-				System.out.print("Choose Option : ");
+				System.out.print("Choose Option Click Number Only : ");
 				
-				int userSelectAccountType = userinput.nextInt();
+				int userSelectAccountType = userInput.nextInt();
 				
 				switch (userSelectAccountType) {
 				case 1: {
 					
 					
-					CreateNewAccount creatAccountObject = new CreateNewAccount();
+					CreateNewAccountIPMTS creatAccountObject = new CreateNewAccountIPMTS();
 					String bank2 = creatAccountObject.createAccount1();
 					
 					FomFilling fomfilling1 = new FomFilling();
-					 FormFillGetSet ll=fomfilling1.fomFilling(bank2 );
-					
-//					fillGetSet.setBank(bank2);
-//					
-//					System.out.println("Enter your Name : ");
-//					fillGetSet.setName(userinput.next());
-//					
-//					
-//					
-//					System.out.println("Age : ");
-//					fillGetSet.setAge(userinput.nextInt());
-//					
-//					System.out.println("Gender : ");
-//					fillGetSet.setGender(userinput.next());
-//					
-//					System.out.println("Mobile Number : ");
-//					fillGetSet.setMobileNumber(userinput.next());
-//					
-//					
-//					System.out.println("Adhar : ");
-//					fillGetSet.setAdhar(userinput.next());
-//					
-//					System.out.println("Email : ");
-//					fillGetSet.setEmail(userinput.next());
-//					
-//					System.out.println("Account Number : ");
-//					fillGetSet.setAccountNumber(userinput.next());
-//					
-//					System.out.println("Pass : ");
-//					fillGetSet.setPass(userinput.next());
-//					
-//					System.out.println("Amount : ");
-//					fillGetSet.setAmount(userinput.nextDouble());
-					
-					
-					
+					 FormFillGetSet formFillGetSet1=fomfilling1.fomFilling(bank2 );					
 				
 					FormFillingDAO formfillObDb = new FormFillingDAO ();
-					formfillObDb.insertDb(ll);
+					formfillObDb.insertDb(formFillGetSet1);
 					break;
 				}
 				case 2: {
@@ -91,7 +56,7 @@ public class SelectAcType {
 				}
 				
 			}
-			userinput.close();
+			userInput.close();
 		}
 
 	}

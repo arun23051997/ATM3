@@ -4,52 +4,23 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
-
 public class DbConnection {
 	private static final String url = "jdbc:mysql://localhost:3306/ATM2";
 	private static final String userName = "root";
 	private static final String passWord = "Ch@ngep0nd@123";
-	
-	
-	public static Connection getConnection() {
-		 Connection connection = null;
-		try {
-		
-			connection = DriverManager.getConnection(url,userName,passWord);
-		
-		} 
-		 catch (SQLException e) {
-			e.printStackTrace();
-		} 
-		
-		return connection;
-				
-		
-		
-       
 
-   
-}		
-	
+	public static Connection getConnection() {
+		Connection connection = null;
+		try {
+
+			connection = DriverManager.getConnection(url, userName, passWord);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return connection;
+
 	}
-//
-//	Connection connection = null;
-//
-//	try {
-//	    connection = DriverManager.getConnection(jdbcUrl, username, password);
-//	    // Perform database operations here
-//	} catch (SQLException e) {
-//	    // Handle database connection errors
-//	    e.printStackTrace();
-//	} finally {
-//	    try {
-//	        if (connection != null) {
-//	            connection.close();
-//	        }
-//	    } catch (SQLException e) {
-//	        // Handle closing connection errors
-//	        e.printStackTrace();
-//	    }
-//	}
-//	
+
+}
