@@ -35,7 +35,7 @@ public class SelectAcType {
 				}
 				case 2: {
 					
-					AlreadyHaveAccount alreadyHaveAccountObject = new AlreadyHaveAccount();
+					AlreadyHaveAccount alreadyHaveAccountObject = new AlreadyHaveAccount(new AlreadyHaveAccountDAO());
 					alreadyHaveAccountObject.alreadyHaveAccount();
 
 					break;

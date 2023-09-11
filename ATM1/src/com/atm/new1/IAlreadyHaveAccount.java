@@ -1,4 +1,4 @@
-package com.atm.new1.interface1;
+package com.atm.new1;
 
 
 public interface IAlreadyHaveAccount {

@@ -8,6 +8,10 @@ public class AlreadyHaveAccount {
 	String pass1;
 
 	boolean exitFlag = false;
+	private IAlreadyHaveAccount IAlreadyHaveAccount;
+	public AlreadyHaveAccount(IAlreadyHaveAccount iAlreadyHaveAccount ) {
+		setIAlreadyHaveAccount(iAlreadyHaveAccount);
+	}
 
 	public void alreadyHaveAccount() throws SQLException {
 
@@ -58,5 +62,13 @@ public class AlreadyHaveAccount {
 		}
 		Scanner.close();
 
+	}
+
+	public IAlreadyHaveAccount getIAlreadyHaveAccount() {
+		return IAlreadyHaveAccount;
+	}
+
+	public void setIAlreadyHaveAccount(IAlreadyHaveAccount iAlreadyHaveAccount) {
+		IAlreadyHaveAccount = iAlreadyHaveAccount;
 	}
 }

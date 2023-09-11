@@ -8,8 +8,6 @@ import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-import com.atm.new1.interface1.IAlreadyHaveAccount;
-
 public class AlreadyHaveAccountDAO implements IAlreadyHaveAccount{
 	String name;
 	String bank;
