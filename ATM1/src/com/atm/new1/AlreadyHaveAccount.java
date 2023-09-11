@@ -10,7 +10,7 @@ public class AlreadyHaveAccount {
 	boolean exitFlag = false;
 	private IAlreadyHaveAccount IAlreadyHaveAccount;
 	public AlreadyHaveAccount(IAlreadyHaveAccount iAlreadyHaveAccount ) {
-		setIAlreadyHaveAccount(iAlreadyHaveAccount);
+		IAlreadyHaveAccount=iAlreadyHaveAccount;
 	}
 
 	public void alreadyHaveAccount() throws SQLException {
@@ -21,9 +21,9 @@ public class AlreadyHaveAccount {
 		accountNumber1 = Scanner.next();
 		System.out.println("Enter Your Password : ");
 		pass1 = Scanner.next();
-		AlreadyHaveAccountDAO myAccount = new AlreadyHaveAccountDAO();
+		//AlreadyHaveAccountDAO myAccount = new AlreadyHaveAccountDAO();
 
-		myAccount.userIdentify(accountNumber1);
+		IAlreadyHaveAccount.userIdentify(accountNumber1);
 
 		while (!exitFlag) {
 			System.out.println("ATM Options:");
@@ -37,17 +37,17 @@ public class AlreadyHaveAccount {
 			switch (choice) {
 			case 1:
 
-				myAccount.checkBalance(accountNumber1);
+				IAlreadyHaveAccount.checkBalance(accountNumber1);
 
 				break;
 			case 2:
 
-				myAccount.deposit();
+				IAlreadyHaveAccount.deposit();
 
 				break;
 			case 3:
 
-				myAccount.withdraw(accountNumber1);
+				IAlreadyHaveAccount.withdraw(accountNumber1);
 
 				break;
 
@@ -64,11 +64,5 @@ public class AlreadyHaveAccount {
 
 	}
 
-	public IAlreadyHaveAccount getIAlreadyHaveAccount() {
-		return IAlreadyHaveAccount;
-	}
-
-	public void setIAlreadyHaveAccount(IAlreadyHaveAccount iAlreadyHaveAccount) {
-		IAlreadyHaveAccount = iAlreadyHaveAccount;
-	}
+	
 }
