@@ -12,13 +12,13 @@ public class FormFillGetSet {
 	private String accountNumber;
 	private String pass;
 	private double amount;
-	private IAlreadyHaveAccount IAlreadyHaveAccount;
+	//private IAlreadyHaveAccount IAlreadyHaveAccount;
 
 	FormFillGetSet() {
 	}
 
 	public FormFillGetSet(String name, int age, String gender, String mobileNumber, String adhar, String email,
-			String accountNumber, String pass, String bank, double amount,IAlreadyHaveAccount IAlreadyHaveAccount) {
+			String accountNumber, String pass, String bank, double amount) {
 
 		this.name = name;
 		this.age = age;
@@ -111,11 +111,11 @@ public class FormFillGetSet {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-	public IAlreadyHaveAccount getIAlreadyHaveAccount() {
-		return IAlreadyHaveAccount;
-	}
-
-public void setIAlreadyHaveAccount(IAlreadyHaveAccount iAlreadyHaveAccount) {
-		IAlreadyHaveAccount = iAlreadyHaveAccount;
-	}	
+//	public IAlreadyHaveAccount getIAlreadyHaveAccount() {
+//		return IAlreadyHaveAccount;
+//	}
+//
+//    public void setIAlreadyHaveAccount(IAlreadyHaveAccount iAlreadyHaveAccount) {
+//		IAlreadyHaveAccount = iAlreadyHaveAccount;
+//	}	
 }

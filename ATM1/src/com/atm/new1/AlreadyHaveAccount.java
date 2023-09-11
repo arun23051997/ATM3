@@ -8,9 +8,11 @@ public class AlreadyHaveAccount {
 	String pass1;
 
 	boolean exitFlag = false;
-	private IAlreadyHaveAccount IAlreadyHaveAccount;
+	private IAlreadyHaveAccount dependency;
+	
+	
 	public AlreadyHaveAccount(IAlreadyHaveAccount iAlreadyHaveAccount ) {
-		IAlreadyHaveAccount=iAlreadyHaveAccount;
+		dependency=iAlreadyHaveAccount;
 	}
 
 	public void alreadyHaveAccount() throws SQLException {
@@ -23,7 +25,7 @@ public class AlreadyHaveAccount {
 		pass1 = Scanner.next();
 		//AlreadyHaveAccountDAO myAccount = new AlreadyHaveAccountDAO();
 
-		IAlreadyHaveAccount.userIdentify(accountNumber1);
+		dependency.userIdentify(accountNumber1);
 
 		while (!exitFlag) {
 			System.out.println("ATM Options:");
@@ -37,17 +39,17 @@ public class AlreadyHaveAccount {
 			switch (choice) {
 			case 1:
 
-				IAlreadyHaveAccount.checkBalance(accountNumber1);
+				dependency.checkBalance(accountNumber1);
 
 				break;
 			case 2:
 
-				IAlreadyHaveAccount.deposit();
+				dependency.deposit();
 
 				break;
 			case 3:
 
-				IAlreadyHaveAccount.withdraw(accountNumber1);
+				dependency.withdraw(accountNumber1);
 
 				break;
 
