@@ -12,7 +12,7 @@ public class FormFillGetSet {
 	private String accountNumber;
 	private String pass;
 	private double amount;
-	//private IAlreadyHaveAccount IAlreadyHaveAccount;
+	
 
 	FormFillGetSet() {
 	}
@@ -111,11 +111,5 @@ public class FormFillGetSet {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-//	public IAlreadyHaveAccount getIAlreadyHaveAccount() {
-//		return IAlreadyHaveAccount;
-//	}
-//
-//    public void setIAlreadyHaveAccount(IAlreadyHaveAccount iAlreadyHaveAccount) {
-//		IAlreadyHaveAccount = iAlreadyHaveAccount;
-//	}	
+
 }

@@ -80,7 +80,7 @@ public class AlreadyHaveAccountDAO implements IAlreadyHaveAccount{
 			double deposit = Scanner.nextDouble();
 			System.out.println("Which account deposit : ");
 			String accountnumber2 = Scanner.next();
-			Connection con = DbConnection.getConnection();
+			Connection con =DbConnection.getConnection();
 			String qry = "SELECT * FROM Form WHERE AccountNumber =" + accountnumber2;
 			PreparedStatement pst = con.prepareStatement(qry);
 			// Statement st = con.createStatement();

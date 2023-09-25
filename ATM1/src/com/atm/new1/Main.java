@@ -14,6 +14,7 @@ public class Main {
 			System.out.println("The Main Catch Error " + e);
 		} finally {
 			try {
+				
 
 				if (DbConnection.getConnection() != null) {
 					DbConnection.getConnection().close();
